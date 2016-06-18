@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPTallyAPI-Shortcodes
+ * Plugin Name: WPTally API Shortcodes
  * Plugin URI: https://github.com/ahmadawais/WPTallyAPI-Shortcodes
  * Description: Shortcode to Obtain The Total Download Count For Plugins Attached to a WordPress.org Username.
  * Author: mrahmadawais, WPTie
@@ -48,3 +48,5 @@ if ( ! defined('WTA_URL' ) ) {
 if ( file_exists( WTA_DIR . '/class/' ) ) {
     require_once( WTA_DIR . '/class/class-wp-tally-api-shortcodes.php' );
 }
+
+new WP_TALLY_API_Shortcodes();
