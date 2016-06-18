@@ -5,7 +5,7 @@
  * Description: Shortcode to Obtain The Total Download Count For Plugins Attached to a WordPress.org Username.
  * Author: mrahmadawais, WPTie
  * Author URI: http://AhmadAwais.com/
- * Version: 0.0.1
+ * Version: 0.0.2
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 // Plugin version.
 if ( ! defined( 'WTA_VERSION' ) ) {
-    define( 'WTA_VERSION', '0.0.1' );
+    define( 'WTA_VERSION', '0.0.2' );
 }
 
 if ( ! defined( 'WTA_NAME' ) ) {

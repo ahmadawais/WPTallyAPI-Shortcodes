@@ -57,20 +57,26 @@ class WP_TALLY_API_Shortcodes {
 		// Get WPTAlly's object.
 		$wptally_response = $this->get_stats( $_atts['u'] );
 
-		// Plugin Count.
-		$plugin_count = $wptally_response->info->plugin_count;
-
-		// Plugin Download Count.
-		$plugin_download_count = $wptally_response->info->total_plugin_downloads;
+		// Bail if there is an error.
+		if ( ! is_object( $wptally_response ) ) {
+			return $wptally_response;
+		}
 
 		// Is plugin count?
 		if ( 'y' == $_atts['p'] ) {
+			// Plugin Count.
+			$plugin_count = $wptally_response->info->plugin_count;
 
+			// Return count with no decimal but thousand separator.
 			return number_format( $plugin_count, 0, '.', ',' );
 		}
 
 		// Is plugin download count?
 		if ( 'y' == $_atts['d'] ) {
+			// Plugin Download Count.
+			$plugin_download_count = $wptally_response->info->total_plugin_downloads;
+
+			// Return count with no decimal but thousand separator.
 			return number_format( $plugin_download_count, 0, '.', ',' );
 		}
 
@@ -88,6 +94,9 @@ class WP_TALLY_API_Shortcodes {
 		// Set a transient.
 		$transient = 'wta_response';
 
+		// Delete trasient for debugging.
+		// delete_transient( $transient );
+
 		// Get the value.
 		$wta_transient = get_transient( $transient );
 
@@ -96,7 +105,7 @@ class WP_TALLY_API_Shortcodes {
 		$url = 'http://wptally.com/api/' . $username;
 
 		// If no transient then fetch.
-		if ( false === $wta_transient || null === $wta_transient || ! is_wp_error( $wta_transient ) ) {
+		if ( false === $wta_transient || null === $wta_transient || is_wp_error( $wta_transient ) ) {
 			// Get the response.
 			$response  = wp_safe_remote_get( $url );
 
@@ -111,10 +120,9 @@ class WP_TALLY_API_Shortcodes {
 		    	// Return the object.
 				return $wta;
 		    } elseif ( true === WP_DEBUG && is_wp_error( $response ) ) {
-		    	$error_string = $response->get_error_message();
-	    	    return '<div id="message" class="error"><p>' . $error_string . '</p></div>';
+	    	    return $response->get_error_message();
 		    } else {
-		    	return '68,000+';
+		    	return '(Unable to fetch at this time!)';
 		    }
 		} else {
 			return $wta_transient;
