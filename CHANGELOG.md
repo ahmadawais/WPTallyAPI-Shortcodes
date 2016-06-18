@@ -1,5 +1,8 @@
 #WPTally API Shortcodes
 
+## Version 0.0.5
+- FIX: Minor change in default returned data.
+
 ## Version 0.0.4
 - FIX: Main class check.
 

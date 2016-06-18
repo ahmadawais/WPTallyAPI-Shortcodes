@@ -5,7 +5,7 @@
  * Description: Shortcode to Obtain The Total Download Count For Plugins Attached to a WordPress.org Username.
  * Author: mrahmadawais, WPTie
  * Author URI: http://AhmadAwais.com/
- * Version: 0.0.4
+ * Version: 0.0.5
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define global constants.
  *
- * @since 1.0.0
+ * @since 0.0.1
  */
 if ( ! defined( 'WTA_NAME' ) ) {
     define( 'WTA_NAME', trim( dirname( plugin_basename( __FILE__ ) ), '/' ) );
@@ -40,7 +40,7 @@ if ( ! defined('WTA_URL' ) ) {
 /**
  * Class: WP_TALLY_API_Shortcodes.
  *
- * @since 1.0.0
+ * @since 0.0.1
  */
 if ( file_exists( WTA_DIR . '/class/class-wp-tally-api-shortcodes.php' ) ) {
     require_once( WTA_DIR . '/class/class-wp-tally-api-shortcodes.php' );

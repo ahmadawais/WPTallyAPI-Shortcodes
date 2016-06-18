@@ -81,7 +81,7 @@ class WP_TALLY_API_Shortcodes {
 		}
 
 		// Default return.
-		return number_format( $plugin_download_count, 0, '.', ',' );
+		return number_format( $wptally_response->info->total_plugin_downloads, 0, '.', ',' );
 	}
 
 	/**
