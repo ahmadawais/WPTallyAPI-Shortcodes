@@ -5,9 +5,11 @@
  * Description: Shortcode to Obtain The Total Download Count For Plugins Attached to a WordPress.org Username.
  * Author: mrahmadawais, WPTie
  * Author URI: http://AhmadAwais.com/
- * Version: 0.0.2
+ * Version: 0.0.3
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+ * GitHub Plugin URL: https://github.com/ahmadawais/WPTallyAPI-Shortcodes/
  *
  * @package WTA
  */

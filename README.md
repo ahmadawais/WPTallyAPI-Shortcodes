@@ -16,7 +16,23 @@ NOTE: WPTallyAPI-Shortcodes plugin uses transients to cache the counts for `24 *
 ### Screenshot
 ![](https://i.imgur.com/xcyQg9d.png)
 
+## To do 
+- [x] WTA shortcode
+- [x] WTA plugin count
+- [x] WTA plugin download count
+- [x] WTA GitHub Updater & Better Documentation
+- [ ] WTA Theme Count
+- [ ] WTA Theme Download Count
+- [ ] WTA Plugin and Theme Details
+
+## Updates
+You can use [GitHub Updater](https://github.com/afragen/github-updater) to receive updates for this plugin. 
+
 ## Changelog
+
+## Version 0.0.3
+- Better documentation.
+- GitHub Updater.
 
 ### Version 0.0.2
 - Transients `24 * HOUR_IN_SECONDS`.
