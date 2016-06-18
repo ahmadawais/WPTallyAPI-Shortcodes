@@ -30,6 +30,9 @@ You can use [GitHub Updater](https://github.com/afragen/github-updater) to recei
 
 ## Changelog
 
+## Version 0.0.4
+- FIX: Main class check.
+
 ## Version 0.0.3
 - Better documentation.
 - GitHub Updater.
