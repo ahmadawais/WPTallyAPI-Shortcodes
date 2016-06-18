@@ -25,11 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-// Plugin version.
-if ( ! defined( 'WTA_VERSION' ) ) {
-    define( 'WTA_VERSION', '0.0.2' );
-}
-
 if ( ! defined( 'WTA_NAME' ) ) {
     define( 'WTA_NAME', trim( dirname( plugin_basename( __FILE__ ) ), '/' ) );
 }
