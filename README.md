@@ -1,5 +1,7 @@
 # WPTallyAPI-Shortcodes
-`[wta]` Shortcode to obtain total plugins count and total plugins downloads count attached to a WordPress.org Username.
+`[wta]` Shortcode to obtain total plugins count and total plugins downloads count attached to a WordPress.org Username. 
+
+NOTE: WPTallyAPI-Shortcodes plugin uses transients to cache the counts for `24 * HOUR_IN_SECONDS`.
 
 ## Shortcode
 - `[wta]` shortcode accepts following parameters
