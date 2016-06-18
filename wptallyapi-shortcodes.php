@@ -42,7 +42,7 @@ if ( ! defined('WTA_URL' ) ) {
  *
  * @since 1.0.0
  */
-if ( file_exists( WTA_DIR . '/class/' ) ) {
+if ( file_exists( WTA_DIR . '/class/class-wp-tally-api-shortcodes.php' ) ) {
     require_once( WTA_DIR . '/class/class-wp-tally-api-shortcodes.php' );
 }
 
